@@ -75,9 +75,9 @@
             // grpFromDecimal
             // 
             grpFromDecimal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            grpFromDecimal.Location = new Point(6, 219);
+            grpFromDecimal.Location = new Point(6, 191);
             grpFromDecimal.Name = "grpFromDecimal";
-            grpFromDecimal.Size = new Size(907, 205);
+            grpFromDecimal.Size = new Size(907, 177);
             grpFromDecimal.TabIndex = 1;
             grpFromDecimal.TabStop = false;
             grpFromDecimal.Text = "Convert from decimal";
@@ -91,52 +91,53 @@
             grpToDecimal.Controls.Add(txtSourceValue);
             grpToDecimal.Controls.Add(lblSelectSource);
             grpToDecimal.Controls.Add(cmbSourceType);
+            grpToDecimal.Font = new Font("Segoe UI", 10F);
             grpToDecimal.Location = new Point(6, 8);
             grpToDecimal.Name = "grpToDecimal";
-            grpToDecimal.Size = new Size(907, 205);
+            grpToDecimal.Size = new Size(907, 177);
             grpToDecimal.TabIndex = 0;
             grpToDecimal.TabStop = false;
             grpToDecimal.Text = "Convert to decimal";
             // 
             // txtDecimalValue
             // 
-            txtDecimalValue.Location = new Point(381, 37);
+            txtDecimalValue.Location = new Point(381, 43);
             txtDecimalValue.Name = "txtDecimalValue";
             txtDecimalValue.ReadOnly = true;
-            txtDecimalValue.Size = new Size(246, 23);
+            txtDecimalValue.Size = new Size(246, 25);
             txtDecimalValue.TabIndex = 5;
             // 
             // lblDecimalValue
             // 
             lblDecimalValue.AutoSize = true;
-            lblDecimalValue.Location = new Point(381, 19);
+            lblDecimalValue.Location = new Point(381, 21);
             lblDecimalValue.Name = "lblDecimalValue";
-            lblDecimalValue.Size = new Size(81, 15);
+            lblDecimalValue.Size = new Size(93, 19);
             lblDecimalValue.TabIndex = 4;
             lblDecimalValue.Text = "Decimal value";
             // 
             // lblSourceValue
             // 
             lblSourceValue.AutoSize = true;
-            lblSourceValue.Location = new Point(6, 89);
+            lblSourceValue.Location = new Point(6, 95);
             lblSourceValue.Name = "lblSourceValue";
-            lblSourceValue.Size = new Size(74, 15);
+            lblSourceValue.Size = new Size(86, 19);
             lblSourceValue.TabIndex = 3;
             lblSourceValue.Text = "Source value";
             // 
             // txtSourceValue
             // 
-            txtSourceValue.Location = new Point(6, 107);
+            txtSourceValue.Location = new Point(6, 117);
             txtSourceValue.Name = "txtSourceValue";
-            txtSourceValue.Size = new Size(246, 23);
+            txtSourceValue.Size = new Size(246, 25);
             txtSourceValue.TabIndex = 2;
             // 
             // lblSelectSource
             // 
             lblSelectSource.AutoSize = true;
-            lblSelectSource.Location = new Point(6, 19);
+            lblSelectSource.Location = new Point(6, 21);
             lblSelectSource.Name = "lblSelectSource";
-            lblSelectSource.Size = new Size(76, 15);
+            lblSelectSource.Size = new Size(88, 19);
             lblSelectSource.TabIndex = 1;
             lblSelectSource.Text = "Select source";
             // 
@@ -145,9 +146,9 @@
             cmbSourceType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSourceType.FormattingEnabled = true;
             cmbSourceType.Items.AddRange(new object[] { "Binary", "Hexadecimal", "Octal" });
-            cmbSourceType.Location = new Point(6, 37);
+            cmbSourceType.Location = new Point(6, 43);
             cmbSourceType.Name = "cmbSourceType";
-            cmbSourceType.Size = new Size(246, 23);
+            cmbSourceType.Size = new Size(246, 25);
             cmbSourceType.TabIndex = 0;
             // 
             // tpJWT
@@ -155,7 +156,7 @@
             tpJWT.Location = new Point(204, 4);
             tpJWT.Name = "tpJWT";
             tpJWT.Padding = new Padding(3);
-            tpJWT.Size = new Size(1235, 757);
+            tpJWT.Size = new Size(921, 572);
             tpJWT.TabIndex = 1;
             tpJWT.Text = "JWT";
             tpJWT.UseVisualStyleBackColor = true;
