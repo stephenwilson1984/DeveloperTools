@@ -48,5 +48,6 @@ public partial class MainForm : Form
     private void MainForm_Load(object? sender, EventArgs e)
     {
         cmbSourceType.SelectedIndex = 0;
+        cmbDestinationType.SelectedIndex = 0;
     }
 }

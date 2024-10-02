@@ -30,10 +30,11 @@
         {
             tbMainNavigation = new TabControl();
             tpNumbers = new TabPage();
-            grpFromDecimal = new GroupBox();
-            grpToDecimal = new GroupBox();
+            grpConvertNumbers = new GroupBox();
             txtDecimalValue = new TextBox();
-            lblDecimalValue = new Label();
+            lblDestinationType = new Label();
+            cmbDestinationType = new ComboBox();
+            lblDestinationValue = new Label();
             lblSourceValue = new Label();
             txtSourceValue = new TextBox();
             lblSelectSource = new Label();
@@ -41,7 +42,7 @@
             tpJWT = new TabPage();
             tbMainNavigation.SuspendLayout();
             tpNumbers.SuspendLayout();
-            grpToDecimal.SuspendLayout();
+            grpConvertNumbers.SuspendLayout();
             SuspendLayout();
             // 
             // tbMainNavigation
@@ -63,8 +64,7 @@
             // tpNumbers
             // 
             tpNumbers.BackColor = SystemColors.ControlLightLight;
-            tpNumbers.Controls.Add(grpFromDecimal);
-            tpNumbers.Controls.Add(grpToDecimal);
+            tpNumbers.Controls.Add(grpConvertNumbers);
             tpNumbers.Location = new Point(204, 4);
             tpNumbers.Name = "tpNumbers";
             tpNumbers.Padding = new Padding(3);
@@ -72,49 +72,60 @@
             tpNumbers.TabIndex = 0;
             tpNumbers.Text = "Numbers";
             // 
-            // grpFromDecimal
+            // grpConvertNumbers
             // 
-            grpFromDecimal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            grpFromDecimal.Location = new Point(6, 191);
-            grpFromDecimal.Name = "grpFromDecimal";
-            grpFromDecimal.Size = new Size(907, 177);
-            grpFromDecimal.TabIndex = 1;
-            grpFromDecimal.TabStop = false;
-            grpFromDecimal.Text = "Convert from decimal";
-            // 
-            // grpToDecimal
-            // 
-            grpToDecimal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            grpToDecimal.Controls.Add(txtDecimalValue);
-            grpToDecimal.Controls.Add(lblDecimalValue);
-            grpToDecimal.Controls.Add(lblSourceValue);
-            grpToDecimal.Controls.Add(txtSourceValue);
-            grpToDecimal.Controls.Add(lblSelectSource);
-            grpToDecimal.Controls.Add(cmbSourceType);
-            grpToDecimal.Font = new Font("Segoe UI", 10F);
-            grpToDecimal.Location = new Point(6, 8);
-            grpToDecimal.Name = "grpToDecimal";
-            grpToDecimal.Size = new Size(907, 177);
-            grpToDecimal.TabIndex = 0;
-            grpToDecimal.TabStop = false;
-            grpToDecimal.Text = "Convert to decimal";
+            grpConvertNumbers.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            grpConvertNumbers.Controls.Add(txtDecimalValue);
+            grpConvertNumbers.Controls.Add(lblDestinationType);
+            grpConvertNumbers.Controls.Add(cmbDestinationType);
+            grpConvertNumbers.Controls.Add(lblDestinationValue);
+            grpConvertNumbers.Controls.Add(lblSourceValue);
+            grpConvertNumbers.Controls.Add(txtSourceValue);
+            grpConvertNumbers.Controls.Add(lblSelectSource);
+            grpConvertNumbers.Controls.Add(cmbSourceType);
+            grpConvertNumbers.Font = new Font("Segoe UI", 10F);
+            grpConvertNumbers.Location = new Point(6, 8);
+            grpConvertNumbers.Name = "grpConvertNumbers";
+            grpConvertNumbers.Size = new Size(907, 177);
+            grpConvertNumbers.TabIndex = 0;
+            grpConvertNumbers.TabStop = false;
+            grpConvertNumbers.Text = "Convert numbers";
             // 
             // txtDecimalValue
             // 
-            txtDecimalValue.Location = new Point(381, 43);
+            txtDecimalValue.Location = new Point(372, 117);
             txtDecimalValue.Name = "txtDecimalValue";
             txtDecimalValue.ReadOnly = true;
             txtDecimalValue.Size = new Size(246, 25);
             txtDecimalValue.TabIndex = 5;
             // 
-            // lblDecimalValue
+            // lblDestinationType
             // 
-            lblDecimalValue.AutoSize = true;
-            lblDecimalValue.Location = new Point(381, 21);
-            lblDecimalValue.Name = "lblDecimalValue";
-            lblDecimalValue.Size = new Size(93, 19);
-            lblDecimalValue.TabIndex = 4;
-            lblDecimalValue.Text = "Decimal value";
+            lblDestinationType.AutoSize = true;
+            lblDestinationType.Location = new Point(372, 21);
+            lblDestinationType.Name = "lblDestinationType";
+            lblDestinationType.Size = new Size(147, 19);
+            lblDestinationType.TabIndex = 3;
+            lblDestinationType.Text = "Select destination type";
+            // 
+            // cmbDestinationType
+            // 
+            cmbDestinationType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDestinationType.FormattingEnabled = true;
+            cmbDestinationType.Items.AddRange(new object[] { "Binary", "Hexadecimal", "Octal" });
+            cmbDestinationType.Location = new Point(372, 43);
+            cmbDestinationType.Name = "cmbDestinationType";
+            cmbDestinationType.Size = new Size(246, 25);
+            cmbDestinationType.TabIndex = 2;
+            // 
+            // lblDestinationValue
+            // 
+            lblDestinationValue.AutoSize = true;
+            lblDestinationValue.Location = new Point(372, 95);
+            lblDestinationValue.Name = "lblDestinationValue";
+            lblDestinationValue.Size = new Size(115, 19);
+            lblDestinationValue.TabIndex = 4;
+            lblDestinationValue.Text = "Destination value";
             // 
             // lblSourceValue
             // 
@@ -137,15 +148,15 @@
             lblSelectSource.AutoSize = true;
             lblSelectSource.Location = new Point(6, 21);
             lblSelectSource.Name = "lblSelectSource";
-            lblSelectSource.Size = new Size(88, 19);
+            lblSelectSource.Size = new Size(119, 19);
             lblSelectSource.TabIndex = 1;
-            lblSelectSource.Text = "Select source";
+            lblSelectSource.Text = "Select source type";
             // 
             // cmbSourceType
             // 
             cmbSourceType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSourceType.FormattingEnabled = true;
-            cmbSourceType.Items.AddRange(new object[] { "Binary", "Hexadecimal", "Octal" });
+            cmbSourceType.Items.AddRange(new object[] { "Decimal", "Binary", "Hexadecimal", "Octal" });
             cmbSourceType.Location = new Point(6, 43);
             cmbSourceType.Name = "cmbSourceType";
             cmbSourceType.Size = new Size(246, 25);
@@ -171,8 +182,8 @@
             Text = "Developer Tools";
             tbMainNavigation.ResumeLayout(false);
             tpNumbers.ResumeLayout(false);
-            grpToDecimal.ResumeLayout(false);
-            grpToDecimal.PerformLayout();
+            grpConvertNumbers.ResumeLayout(false);
+            grpConvertNumbers.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -182,12 +193,17 @@
         private TabPage tpNumbers;
         private TabPage tpJWT;
         private GroupBox grpFromDecimal;
-        private GroupBox grpToDecimal;
+        private GroupBox grpConvertNumbers;
         private Label lblSelectSource;
         private ComboBox cmbSourceType;
         private TextBox txtDecimalValue;
-        private Label lblDecimalValue;
+        private Label lblDestinationValue;
         private Label lblSourceValue;
         private TextBox txtSourceValue;
+        private Label lblDestinationType;
+        private ComboBox cmbDestinationType;
+        private TextBox txtDestinationValue;
+        private TextBox txtSourceDecimal;
+        private Label lblSourceDecimal;
     }
 }
