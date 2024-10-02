@@ -22,12 +22,12 @@ public partial class BaseConverter : UserControl
     {
         InitializeComponent();
 
-        txtSourceValue.KeyDown += TxtSourceValue_KeyDown;
-        txtSourceValue.TextChanged += TxtSourceValue_TextChanged;
-        cmbSourceType.SelectedIndexChanged += CmbSourceType_SelectedIndexChanged;
-        cmbDestinationType.SelectedIndexChanged += CmbDestinationType_SelectedIndexChanged;
-        btnReset.Click += BtnReset_Click;
-        lnklblCopy.Click += LnkLblCopy_Click;
+        txtSourceValue.KeyDown += SourceValue_KeyDown;
+        txtSourceValue.TextChanged += SourceValue_TextChanged;
+        cmbSourceType.SelectedIndexChanged += SourceType_SelectedIndexChanged;
+        cmbDestinationType.SelectedIndexChanged += DestinationType_SelectedIndexChanged;
+        btnReset.Click += ResetButton_Click;
+        lnklblCopy.Click += Copy_Click;
         Load += BaseConverter_Load;
     }
 
@@ -36,17 +36,17 @@ public partial class BaseConverter : UserControl
         Reset();
     }
 
-    private void BtnReset_Click(object? sender, EventArgs e)
+    private void ResetButton_Click(object? sender, EventArgs e)
     {
         Reset();
     }
 
-    private void TxtSourceValue_TextChanged(object? sender, EventArgs e)
+    private void SourceValue_TextChanged(object? sender, EventArgs e)
     {
         PerformConversion();
     }
 
-    private void TxtSourceValue_KeyDown(object? sender, KeyEventArgs e)
+    private void SourceValue_KeyDown(object? sender, KeyEventArgs e)
     {
         e.Handled = cmbSourceType.SelectedItem switch
         {
@@ -63,18 +63,18 @@ public partial class BaseConverter : UserControl
         }
     }
 
-    private void CmbSourceType_SelectedIndexChanged(object? sender, EventArgs e)
+    private void SourceType_SelectedIndexChanged(object? sender, EventArgs e)
     {
         txtSourceValue.Text = string.Empty;
         txtDestinationValue.Text = string.Empty;
     }
 
-    private void CmbDestinationType_SelectedIndexChanged(object? sender, EventArgs e)
+    private void DestinationType_SelectedIndexChanged(object? sender, EventArgs e)
     {
         PerformConversion();
     }
 
-    private void LnkLblCopy_Click(object? sender, EventArgs e)
+    private void Copy_Click(object? sender, EventArgs e)
     {
         if (string.IsNullOrWhiteSpace(txtDestinationValue.Text))
         {
