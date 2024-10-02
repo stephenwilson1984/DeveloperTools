@@ -93,7 +93,7 @@
             // 
             // txtDecimalValue
             // 
-            txtDecimalValue.Location = new Point(372, 117);
+            txtDecimalValue.Location = new Point(502, 125);
             txtDecimalValue.Name = "txtDecimalValue";
             txtDecimalValue.ReadOnly = true;
             txtDecimalValue.Size = new Size(246, 25);
@@ -102,7 +102,7 @@
             // lblDestinationType
             // 
             lblDestinationType.AutoSize = true;
-            lblDestinationType.Location = new Point(372, 21);
+            lblDestinationType.Location = new Point(502, 29);
             lblDestinationType.Name = "lblDestinationType";
             lblDestinationType.Size = new Size(147, 19);
             lblDestinationType.TabIndex = 3;
@@ -113,7 +113,7 @@
             cmbDestinationType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDestinationType.FormattingEnabled = true;
             cmbDestinationType.Items.AddRange(new object[] { "Binary", "Hexadecimal", "Octal" });
-            cmbDestinationType.Location = new Point(372, 43);
+            cmbDestinationType.Location = new Point(502, 51);
             cmbDestinationType.Name = "cmbDestinationType";
             cmbDestinationType.Size = new Size(246, 25);
             cmbDestinationType.TabIndex = 2;
@@ -121,7 +121,7 @@
             // lblDestinationValue
             // 
             lblDestinationValue.AutoSize = true;
-            lblDestinationValue.Location = new Point(372, 95);
+            lblDestinationValue.Location = new Point(502, 103);
             lblDestinationValue.Name = "lblDestinationValue";
             lblDestinationValue.Size = new Size(115, 19);
             lblDestinationValue.TabIndex = 4;
@@ -130,7 +130,7 @@
             // lblSourceValue
             // 
             lblSourceValue.AutoSize = true;
-            lblSourceValue.Location = new Point(6, 95);
+            lblSourceValue.Location = new Point(136, 103);
             lblSourceValue.Name = "lblSourceValue";
             lblSourceValue.Size = new Size(86, 19);
             lblSourceValue.TabIndex = 3;
@@ -138,7 +138,7 @@
             // 
             // txtSourceValue
             // 
-            txtSourceValue.Location = new Point(6, 117);
+            txtSourceValue.Location = new Point(136, 125);
             txtSourceValue.Name = "txtSourceValue";
             txtSourceValue.Size = new Size(246, 25);
             txtSourceValue.TabIndex = 2;
@@ -146,7 +146,7 @@
             // lblSelectSource
             // 
             lblSelectSource.AutoSize = true;
-            lblSelectSource.Location = new Point(6, 21);
+            lblSelectSource.Location = new Point(136, 29);
             lblSelectSource.Name = "lblSelectSource";
             lblSelectSource.Size = new Size(119, 19);
             lblSelectSource.TabIndex = 1;
@@ -157,7 +157,7 @@
             cmbSourceType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSourceType.FormattingEnabled = true;
             cmbSourceType.Items.AddRange(new object[] { "Decimal", "Binary", "Hexadecimal", "Octal" });
-            cmbSourceType.Location = new Point(6, 43);
+            cmbSourceType.Location = new Point(136, 51);
             cmbSourceType.Name = "cmbSourceType";
             cmbSourceType.Size = new Size(246, 25);
             cmbSourceType.TabIndex = 0;
@@ -178,7 +178,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1129, 580);
             Controls.Add(tbMainNavigation);
+            MaximizeBox = false;
+            MaximumSize = new Size(1145, 619);
+            MinimumSize = new Size(1145, 619);
             Name = "MainForm";
+            SizeGripStyle = SizeGripStyle.Hide;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Developer Tools";
             tbMainNavigation.ResumeLayout(false);
             tpNumbers.ResumeLayout(false);
