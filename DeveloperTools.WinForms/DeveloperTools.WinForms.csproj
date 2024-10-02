@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DeveloperTools.Common\DeveloperTools.Common.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,7 +6,6 @@ public partial class MainForm : Form
     {
         InitializeComponent();
         tbMainNavigation.DrawItem += TbMainNavigation_DrawItem;
-        Load += MainForm_Load;
     }
 
     private void TbMainNavigation_DrawItem(object? sender, DrawItemEventArgs e)
@@ -32,9 +31,6 @@ public partial class MainForm : Form
             e.DrawBackground();
         }
 
-        // Use our own font.
-        Font _tabFont = new Font("Segoe UI", 10.0f, FontStyle.Regular, GraphicsUnit.Pixel);
-
         // Draw string. Center the text.
         var stringFlags = new StringFormat
         {
@@ -43,11 +39,5 @@ public partial class MainForm : Form
         };
 
         g.DrawString(tabPage.Text, tabPage.Font, textBrush, tabBounds, new StringFormat(stringFlags));
-    }
-
-    private void MainForm_Load(object? sender, EventArgs e)
-    {
-        cmbSourceType.SelectedIndex = 0;
-        cmbDestinationType.SelectedIndex = 0;
     }
 }
